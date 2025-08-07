@@ -32,9 +32,9 @@ variable "instance_type" {
   default     = "t3.micro"
 }
 
-variable "api_key" {
+variable "api_key_secret_id" {
   type        = string
-  description = "(Required) API key for web app to talk to SaaS platform."
+  description = "(Required) Secret ID for the API key for web app to talk to SaaS platform."
 }
 
 variable "tfe_organization" {
@@ -52,3 +52,7 @@ variable "playbook_repository" {
   description = "(Required) URI for Ansible playbook repo."
 }
 
+variable "ec2_role_name" {
+  type        = string
+  description = "(Required) Name of IAM role to use for EC2 instances."
+}
